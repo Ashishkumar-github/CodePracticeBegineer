@@ -1,0 +1,26 @@
+using System;
+
+class HelloWorld {
+    static void Main() {
+       
+        int num = int.Parse(Console.ReadLine());
+        int flag=0;
+        for(int i=2;i<num-1;i++){        
+            if((num%i) == 0)
+            {
+                Console.WriteLine("Not a Prime");
+                flag=1;
+                break;
+            }
+        } 
+        
+        if(num == 1)
+        {
+            Console.WriteLine("Not a Prime");
+                flag=1;
+        }
+            
+        if(flag==0)
+        Console.WriteLine("Prime");
+    }
+}
