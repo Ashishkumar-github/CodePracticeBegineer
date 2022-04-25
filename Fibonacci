@@ -1,0 +1,19 @@
+using System;
+
+class HelloWorld {
+    static void Main() {
+        
+        int first=0, second=1, third=0;
+        
+        int? f = null;
+        
+        Console.WriteLine("{0} \n{1}", first, second);
+                      
+        for(int i=0;i<10;i++){
+            third=first+second;
+            Console.WriteLine(third);
+            first=second;            
+            second=third;
+        }
+    }
+}
