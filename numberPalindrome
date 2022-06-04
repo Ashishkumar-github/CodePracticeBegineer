@@ -1,0 +1,32 @@
+using System;
+
+public class Test
+{
+	public static void Main()
+	{
+		Test t = new Test();
+		bool r1 = t.palindrome(121);
+		Console.WriteLine(r1);
+		bool r2 = t.palindrome(122);
+		Console.WriteLine(r2);
+	}
+	public bool palindrome(int n)
+	{
+		int temp = 0, r = 0;
+		int pal = n;
+		while (n >= 1)
+		{
+			r = n % 10;
+			temp = temp * 10 + r;
+			n = n / 10;
+		}
+		if (pal == temp)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
