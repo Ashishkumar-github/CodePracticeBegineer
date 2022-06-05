@@ -1,0 +1,29 @@
+using System;
+
+public class Test
+{
+	public static void Main()
+	{
+		Test t = new Test();
+		bool r1 = t.palindrome("dad");
+		Console.WriteLine(r1);
+		bool r2 = t.palindrome("niti");
+		Console.WriteLine(r2);
+	}
+	public bool palindrome(string n)
+	{
+		int l = n.Length, first = 0, last = l - 1;
+    
+		while (first < last) {
+			if (n[first] == n[last])
+			{
+				first += 1;
+				last -= 1;
+			}
+			else {
+				return false;
+			}
+		}
+		return true;
+	}
+}
